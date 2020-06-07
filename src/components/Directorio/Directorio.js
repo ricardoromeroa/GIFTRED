@@ -8,7 +8,7 @@ import giftCard from '../../assets/img/negocio1.png';
 // import notFimg from '../../assets/png/notFimg.png';
 import { Link } from 'react-router-dom';
 
-const cardLink = "/";
+const cardLink = "/giftcard";
 const socialLink = "/";
 
 const Directorio = () => {
