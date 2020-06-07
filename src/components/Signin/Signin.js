@@ -1,8 +1,9 @@
-import React from 'react'
-import { useHistory } from "react-router-dom"
+import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import "./Signin.css"
+import "./Signin.css";
+import logo from '../../assets/img/logo1.png'
 
 
 const Signin = () => {
@@ -49,16 +50,17 @@ const Signin = () => {
             <div className="card col-12">
                 <Link to="/" className="logo"><img src={logo} alt="logo" />
                 </Link>
+                
 
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Correo Electrónico</label>
+                    <label to="exampleInputEmail1">Correo Electrónico</label>
                     <input onChange={handleEmail} value={email} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Ingresa tu Correo Electrónico" />
-                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu información personal con alguien más.</small>
+                    <small id="emailHelp" className="form-text text-muted">Nunca compartiremos tu información personal con alguien más.</small>
                 </div>
 
                 <div className="form-group">
-                    <label for="exampleInputPassword1">Contraseña</label>
+                    <label to="exampleInputPassword1">Contraseña</label>
                     <input onChange={handlePassword} value={password} type="password" className="form-control" id="exampleInputPassword1" placeholder="Ingresa tu Contraseña" />
                 </div>
 
@@ -72,7 +74,7 @@ const Signin = () => {
                     <div className="spinner-border text-info" role="status">
                     </div>
                 }
-                <button onClick={() => logIn()} type="submit" className="btn btn-primary"> Accede a HIVE </button>
+                <button onClick={() => Auth()} type="submit" className="btn btn-primary"> Accede a GIFTRED </button>
 
                 <p className="registro">No te has registrado? <Link to="/signup">Registrate Aquí</Link></p>
             </div>
