@@ -11,7 +11,7 @@ const LandingMain = () => {
                             <h1 className="lm-h1 mb-5">Apoya a los negocios de tu localidad</h1>
                             <h3 className="lm-h3 mb-5">GiftCards para apoyar a pequeños negocios</h3>
                             <h5 className="lm-h5 mb-5">Con la situación económica actual, buscamos maneras de ayudar a los negocios locales. Con GIFTRED cualquier negocio se puede registrar para ofrecer Gift Cards Electronicas y cualquiera puede comprarlas para apoyar</h5>
-                            <a href="/directorio" className="btn btn-light btn-xl js-scroll-trigger">Compra GiftCard</a>
+                            <a href="/giftcard" className="btn btn-light btn-xl js-scroll-trigger">Compra GiftCard</a>
                             <a href="/directorio" className="btn btn-light btn-xl js-scroll-trigger">Registra Negocio</a>
                         </div>
                     </div>
