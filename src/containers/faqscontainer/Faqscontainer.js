@@ -1,16 +1,16 @@
-import React from 'react';
-import Signin from '../../components/Signin/Signin';
-import './SigninContainer.css'
+import React from 'react'
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from '../../components/Footer/Footer'
+import Faqs from '../../components/Faqs/Faqs'
+import './Faqscontainer.css';
 
-const SigninContainer = () => {
+const Faqscontainer = () => {
     return (
         <div>
             <Navbar />
             <section className="fondo">
                 <div className="container">
-                    <Signin />
+                    <Faqs />
                 </div>
             </section>
             <Footer />
@@ -18,4 +18,4 @@ const SigninContainer = () => {
     )
 }
 
-export default SigninContainer
+export default Faqscontainer

@@ -1,0 +1,64 @@
+.container {
+    
+    padding: 50px;
+    margin: auto;
+}
+
+
+
+
+.form-group.form-control {
+    padding: 50px;
+}
+
+.card {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.856) !important;
+    align-self: center;
+    margin-top: 150px;
+}
+
+.label {
+    margin-top: .5rem;
+}
+
+.btn {
+    margin-top: 50px;
+    align-self: center !important;   
+}
+
+.logo {
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.registro {
+    align-self: center;
+}
+
+.textoli a {
+    color: white;
+}
+
+/* .form{
+    background-color: rgba(255, 255, 255, 0.192);
+} */
+
+.auth {
+    
+    align-self: center;
+    padding: 50px;
+    margin: auto;
+    max-width: 800px; 
+}
+
+.formato {
+    text-align: justify;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 20px !important;
+    padding: 50px;
+}
+
