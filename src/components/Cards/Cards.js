@@ -1,8 +1,8 @@
 import React from 'react';
 import './Cards.css';
-import adduser from '../../assets/icons/adduser.png';
-import giftbox from '../../assets/icons/giftbox.png';
-import money from '../../assets/icons/money.png';
+import adduser from '../../assets/icons/user-plus.svg';
+import giftbox from '../../assets/icons/ticket.svg';
+import money from '../../assets/icons/coin-dollar.svg';
 
 
 const Cards = () => {
