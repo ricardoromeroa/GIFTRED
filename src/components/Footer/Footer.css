@@ -1,0 +1,33 @@
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: #222222;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0;
+}
+
+footer ul {
+    margin-bottom: 0;
+}
+
+footer ul li a {
+    font-size: 20px;
+    color: rgb(255, 161, 85);
+}
+
+footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {
+    text-decoration: none;
+}
+
+.contact {
+    align-content: center !important;
+}
+
+.footer-text {
+    margin: 30px;
+    margin-top: 50px;
+}
