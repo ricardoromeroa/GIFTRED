@@ -4,10 +4,69 @@ header.masthead {
     padding-top: 150px;
     padding-bottom: 100px;
     color: rgb(255, 208, 208);
-    background: #f53c04;
-    background: linear-gradient(to bottom, #ff3c00, #dc2430);
     background-size: cover;
     background-repeat: no-repeat;
+    background-image: url('../../assets/img/landing-main.jpg');
+}
+
+.bg-img {
+  background-color: #ff3c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.absolute-h1 {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 20%;
+  text-align: center;
+  position: absolute;
+  font-size: 3em;
+}
+
+.absolute-h3 {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  position: absolute;
+  font-size: 1.8em;
+}
+
+.absolute-h5 {
+  margin-left: 300px;
+  margin-right: 300px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+  position: absolute;
+}
+
+.absolute-button-left {
+  left: 35%;
+  right: 50%;
+  top: 70%;
+  width: 200px;
+  text-align: center;
+  position: absolute;
+}
+
+.absolute-button-right {
+  left: 55%;
+  right: 50%;
+  top: 70%;
+  width: 200px;
+  text-align: center;
+  position: absolute;
 }
 
 .lm-h1 {
@@ -23,13 +82,15 @@ header.masthead {
     text-align: justify;
 }
 
-header.masthead .header-content {
+.header-content {
     max-width: 500px;
     margin-bottom: 100px;
     text-align: center;
+    margin-top: -300px;
+    position: absolute;
 }
 
-header.masthead .header-content h1 {
+.header-content h1 {
     font-size: 30px;
 }
 
