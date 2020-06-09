@@ -1,14 +1,33 @@
 form { 
     margin: 0 auto; 
-    width:50%;
+    width:75%;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
 }
-.dropdown-divider{
-    margin-bottom: 10px;
+@media only screen and (max-width: 600px){
+    form{
+        width: 98%;
+    }
 }
-header{
+#negocioSection,#giftcardConfigSection,#direccionSection,#responsableSection,#cuentaSection{
     margin-bottom: 20px;
 }
 .row{
     margin-bottom: 5px;
+}
+#headerForm{
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ff3c00, #dc2430);
+}
+#titleRegistro{
+    color:white;
+}
+#formWraper{
+    padding: 3px;
+}
+.divider{
+    background:linear-gradient(to bottom, #ff3c00, #dc2430);
+    height: 0.5px;
+
 }
