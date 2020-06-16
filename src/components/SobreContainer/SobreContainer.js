@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from '../../components/Footer/Footer'
-import SobreGiftred from '../../components/SobreGiftred/SobreGiftred'
+import Navbar from "../Navbar/Navbar";
+import Footer from '../Footer/Footer'
+import SobreGiftred from '../SobreGiftred/SobreGiftred'
 import './SobreContainer.css';
 
 const SobreContainer = () => {

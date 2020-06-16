@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from '../../components/Footer/Footer'
-import Faqs from '../../components/Faqs/Faqs'
+import Navbar from "../Navbar/Navbar";
+import Footer from '../Footer/Footer'
+import Faqs from '../Faqs/Faqs'
 import './Faqscontainer.css';
 
 const Faqscontainer = () => {
