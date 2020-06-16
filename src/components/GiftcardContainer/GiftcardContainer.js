@@ -1,7 +1,7 @@
 import React from 'react';
-import Giftcard from '../../components/Giftcard/Giftcard'
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from '../../components/Footer/Footer'
+import Giftcard from '../Giftcard/Giftcard'
+import Navbar from "../Navbar/Navbar";
+import Footer from '../Footer/Footer'
 
 import "./GiftcardContainer.css";
 // import axios from 'axios';
