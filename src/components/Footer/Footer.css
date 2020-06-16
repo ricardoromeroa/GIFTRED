@@ -1,8 +1,8 @@
 footer {
     padding: 25px 0;
     text-align: center;
-    color: rgb(0, 0, 0);
-    background-color: #222222;
+    color: rgb(255, 161, 85);
+    background-color: #DB242F;
 }
 
 footer p {
@@ -29,5 +29,11 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .footer-text {
     margin: 30px;
-    margin-top: 50px;
+}
+
+.icon-size {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
 }

@@ -7,7 +7,7 @@ import ig from '../../assets/icons/ig.png';
 
 const Footer = () => {
     return (
-        <footer className="contact bg-warning" id="contact">
+        <footer className="contact" id="contact">
             <div className="container">
                 <h2>
                     <i className="fas fa-heart"></i>

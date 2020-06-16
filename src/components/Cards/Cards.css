@@ -29,10 +29,14 @@
 }
 
 .card-body {
-    margin: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
-
+.container {
+  padding: 0 !important;
+}
 
 
 
