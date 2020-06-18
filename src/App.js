@@ -16,7 +16,7 @@ import DashboardUser from './Views/DashboardUserContainer';
 function App() {
   return (
     <BrowserRouter>
-      <NavBar/>
+       <NavBar/>       
       <Switch>
         <Route exact path="/" component={Mainpage} />
         <Route exact path="/signup" component={Signup}/>

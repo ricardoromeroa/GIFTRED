@@ -7,7 +7,7 @@ const Navbar = () => {
     
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-light " id="mainNav">
+            <nav id="navbarWeb" className="navbar navbar-expand-lg navbar-light " id="mainNav">
                 <NavLink className="navbar-brand" to="/">
                     <img src={logo}  alt="giftred" className="navbar-brand js-scroll-trigger" href="#page-top"/>
                 </NavLink>
