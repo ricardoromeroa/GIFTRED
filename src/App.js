@@ -10,6 +10,9 @@ import Directorio from './Views/Directorio';
 import NavBar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
+// Dashboard Users
+import DashboardUser from './Views/DashboardUserContainer';
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,7 +21,7 @@ function App() {
         <Route exact path="/" component={Mainpage} />
         <Route exact path="/signup" component={Signup}/>
         <Route exact path="/directorio" component={Directorio} />
-        {/* <Route exact path="/signin" component={SigninContainer} /> */}
+        <Route exact path="/dashboard-user" component={DashboardUser} />
         {/* <Route exact path="/giftcard" component={GiftcardContainer} /> */}
         {/* <Route exact path="/quienes_somos" component={SobreContainer} />       */}
         {/* <Route exact path="/faqs" component={Faqscontainer} /> */}
