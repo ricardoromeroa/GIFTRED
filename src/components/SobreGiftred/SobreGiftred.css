@@ -27,13 +27,14 @@
     align-self: center !important;   
 }
 
-.logo {
+.logoqs{
+    max-width: 100%;
     width: fit-content;
     align-self: center;
     margin-bottom: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
+
+
 
 .registro {
     align-self: center;

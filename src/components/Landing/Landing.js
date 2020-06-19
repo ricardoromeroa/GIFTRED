@@ -2,21 +2,26 @@ import React from 'react'
 import './Landing.css'
 
 const LandingMain = () => {
-    return (
-      <React.Fragment>
-        <header className="masthead">
-            <div className="h-100 bg-img">
-                <div className="row h-100">
-                </div>
-            </div>
-            <h1 className="lm-h1 mb-5 absolute-h1">Apoya a los negocios de tu localidad</h1>
-            <h3 className="lm-h3 mb-5 absolute-h3">GiftCards para apoyar a pequeños negocios</h3>
-            <h5 className="lm-h5 mb-5 absolute-h5">Con la situación económica actual, buscamos maneras de ayudar a los negocios locales. Con GIFTRED cualquier negocio se puede registrar para ofrecer Gift Cards Electronicas y cualquiera puede comprarlas para apoyar</h5>
-            <a href="/directorio" className="btn btn-light btn-xl js-scroll-trigger absolute-button-left">Compra GiftCard</a>
-            <a href="/negocio-register" className="btn btn-light btn-xl js-scroll-trigger absolute-button-right">Registra Negocio</a>
-        </header>
-      </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      <section className="masthead">
+        <div className="h-100 bg-img">
+          <div className="row h-100">
+          </div>
+        </div>
+        <div className="fondotitle">
+            <h3 className="title"> GIFT CARDS ELECTRONICAS PARA NEGOCIOS LOCALES </h3>
+          {/* <h3 className="h3 lm-h3 mb-5 absolute-h3">GiftCards para apoyar a pequeños negocios</h3> */}
+            <h5 className="title2">Plataforma para conectar al cliente con sus negocios locales favoritos</h5>
+          
+        </div>
+        <div className="mainbuttons">
+          <button href="/clientes" className="btn btn-primary btn-xl js-scroll-trigger absolute-button-left">Clientes</button>
+          <button href="/negocios" className="btn btn-primary btn-xl js-scroll-trigger absolute-button-right">Negocios</button>
+        </div>
+      </section>
+    </React.Fragment>
+  )
 }
 
 export default LandingMain

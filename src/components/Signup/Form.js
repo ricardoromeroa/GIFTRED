@@ -1,6 +1,6 @@
 import React from 'react';
-import SignupFormStyles from './Form.css';
-import MaskedInput from 'react-input-mask';
+// import SignupFormStyles from './Form.css';
+// import MaskedInput from 'react-input-mask';
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {
@@ -13,7 +13,7 @@ import {
     MenuItem
 } from '@material-ui/core';
 import {KeyboardDatePicker,MuiPickersUtilsProvider} from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+// import DateFnsUtils from '@date-io/date-fns';
 
 const useStyles=makeStyles({
     form:{
@@ -64,14 +64,14 @@ const SignupForm=()=>{
             paisNegocio:document.getElementById("paisSelect").value,
             nombreResponsable:document.getElementById("nombreInput").value,
             correoResponsable:document.getElementById("correoResponsableInput").value,
-            telefonoNegocio:document.getElementById("telefonoResponsableInput").value,
+            // telefonoNegocio:document.getElementById("telefonoResponsableInput").value,
             password:document.getElementById("passwordInput").value,
             correoNegocio:document.getElementById("correoNegocioInput").value
         }
         console.log(valuesFormulario);
     }
 
-    let age=0;
+    // let age=0;
 
     return (
         <React.Fragment>
@@ -101,7 +101,7 @@ const SignupForm=()=>{
                 <Typography variant="h6" color="inherit">Configuracion para Giftcards</Typography>
                 <Grid container spacing={2} className={classes.gridWrap}>
                     <Grid item xs={12}>
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                        <MuiPickersUtilsProvider>
                         <KeyboardDatePicker
                         disableToolbar
                         variant="inline"

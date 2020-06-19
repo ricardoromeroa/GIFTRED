@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logos/Logogr.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -14,22 +14,20 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/directorio">Directorio</NavLink>
-                        </li>
-                        <li className="nav-item">
                             <NavLink className="nav-link" to="/quienes_somos">Quienes Somos</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/faqs">FAQs</NavLink>
+                            <NavLink className="nav-link" to="/clientes">Para Clientes</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/signup">Sign Up</NavLink>
+                            <NavLink className="nav-link" to="/empresas">Para Empresas</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/signin">Sign In</NavLink>
+                            <NavLink className="nav-link" to="/faqs">FAQS</NavLink>
                         </li>
-                    </ul>
+                    </ul>  
                 </div>
+                <NavLink className="btn-primary nav-item5" to="/download">Descarga la App</NavLink>
             </nav>
         </header >
     )
