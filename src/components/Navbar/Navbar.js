@@ -7,7 +7,7 @@ const Navbar = () => {
     
     return (
         <header>
-            <nav className="navbar navbar-expand-lg navbar-light " id="mainNav">
+            <nav id="navbarWeb" className="navbar navbar-expand-lg navbar-light " id="mainNav">
                 <NavLink className="navbar-brand" to="/">
                     <img src={logo}  alt="giftred" className="navbar-brand js-scroll-trigger" href="#page-top"/>
                 </NavLink>
@@ -25,7 +25,11 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/faqs">FAQS</NavLink>
                         </li>
-                    </ul>  
+
+                        <li className="nav-item">             
+                            <NavLink className="nav-link" to="/dashboard-user">Dashboard User</NavLink>
+                        </li>
+                    </ul>
                 </div>
                 <NavLink className="btn-primary nav-item5" to="/download">Descarga la App</NavLink>
             </nav>
