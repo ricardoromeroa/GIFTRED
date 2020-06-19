@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../assets/img/logo1.png';
+import logo from '../../assets/img/logos/Logo.png';
+import hh from '../../assets/img/logos/hhgr.png'
 import { Link } from 'react-router-dom';
 import './SobreGiftred.css';
 
@@ -7,13 +8,37 @@ const SobreGiftred = () => {
     return (
         <div className="auth">
             <div className="card col-12">
-                <Link to="/" className="logo"><img src={logo} alt="logo" />
+                <Link to="/" ><img className="logoqs" src={logo} alt="logo" />
                 </Link>
-                <p className='formato'> En busca de ayudar a la economía de negocios locales en México y Latinoamérica que son los más afectados en estos tiempos de pandemia, se están buscando alternativas para obtener ventas y flujo de entrada para poder mantener su negocio a flote. Considerando que el distanciamiento social es la nueva normalidad y el flujo de personas en las calles es mínima y ya no se visitan establecimientos con tanta frecuencia buscamos crear una alternativa para ayudar a estos negocios que dependen tanto el flujo de personas. Esta Alternativa llamada GIFTRED, es una apuesta al mercado de las GiftCards electrónicas. Sabemos que actualmente estas se utilizan mucho en form de prepago y por empresas muy grandes como Apple, Spotify, Amazon, Best Buy, por nombrar algunas. Sabemos que existen muchos beneficios para un negocio en cuanto a manejar Gift Cards para sus clientes o futuros clientes. Por un lado y el más importante en estos tiempos, las gift cards general flujo de efectivo inmediato por adelantado para los negocios prometiendo un servicio o un producto a futuro. Al consumidor le gusta la idea de utilizar Gift Cards como forma de pago  y no directamente efectivo o transacciones bancarias ya que se percibe como más seguro y conveniente. El uso de Gift Cards, incrementa las ventas, y el consumo, por lo general terminan gastando más de lo que tienen en su Gift Card. También crea una interacción con clientes y con futuros clientes. Manejar Gift Cards genera datos útiles y da la posibilidad de crear estrategias de marketing y branding y al ofrecer Giftcards electrónicas, se opta por una alternativa verde en comparación a los plásticos convencionales.
 
-                Partiendo de estos beneficios surge la idea de implementar el uso de Gift Cards electrónicas  para negocios locales pequeños. Es una excelente manera de que los negocios puedan  disponer de efectivo inmediato. A través de GIFTRED, cualquier negocio puede registrarse en la App, crear y asignar un valor para la Gift Card para venderla y cualquier persona puede comprar Gift Cards de los negocios registrados participantes ya sea para uso personal o como regalo. La idea es que con ayuda de las localidades a las cual pertenecen estos negocios, brinden el apoyo a estos establecimientos a los que normalmente acudirían y ayuden a promocionar y a darlos a conocer.
+                <h6 className= 'formato'> Con GIFTRED buscamos ayuar a la economia de negocios locales en México y Latinomérica.</h6>
+                <h6 className= 'formato'> Esta Plataforma es una alternativa para ayudar a los negocios especialmente durante esta etapa de pandemia donde se ven mas afectados.</h6>
+                <h6 className= 'formato'> Apostamos al mercado global de  las GiftCard Electrónicas porque sabemos que actualmente son muy utilizadas y cuentan con muchos beneficios que pueden ser de gran ayuda para la situación actual.</h6>
 
-                Adicionalmente, sabemos que muchas familias de escasos recursos también están pasando por momentos difíciles por lo que parte de la propuesta de GIFTRED es ofrecer un donativo mediante una comisión opcional para el consumidor o saldo remanente de su Gift Card Electrónica  para ayudar a familias necesitadas comprandoles despensas ropa y otras formas de apoyo que también ofrezcan los establecimientos registrados.</p>
+                <h3 className= 'formato titleqs1'> ¿Qué beneficios tienen para los negocios locales?</h3>
+
+                <h4 className= 'h3qs'> Flujo de efectivo al instante</h4>
+                <p className= 'formato'> Al momento de comprar una giftcard, el negocio está recibiendo el dinero de la compra al instante, con la promesa de venta o servicio al cliente para cuando lo desee.</p>
+
+                <h4 className= 'h3qs'> Nuevos Clientes</h4>
+                <p className= 'formato'> Es una excelente manera de recomendar tu negocio o ser recomendado y atraer nuevos clientes. </p>
+
+                <h4 className= 'h3qs'> Estrategia de Marketing</h4>
+                <p className= 'formato'> Es un plus para darse a conocer como negocio y hacerse notar en el mercado como estrategia de marketing. </p>
+
+                <h4 className= 'h3qs'> Incremento en Ventas </h4>
+                <p className= 'formato'> Está comprobado que al utilizar giftcards, el cliente termina gastando más de lo que contiene su giftcard. </p>
+
+                <h6 className= 'formato2'> Al final, sabemos que las Gift cards permiten a los negocios crecer y establecer su nombre y marca a travez de generar interacción y lealtad con clientes frecuentes y clientes potenciales.</h6>
+
+                <h6 className= 'formato3'> Existe muchas maneras de sacarle provecho a esta alternativa, y creemos que es una opcion muy viable y conveniente para ayudar a los negocios locales a sobrellevar esta crisis y en un futuro cosechar frutos y generar ingresos extras con esta herramienta.  </h6>
+
+                <h5 className= 'h5qs'> Ayudémonos todos</h5>
+                <p className= 'formato'> GIFTRED pretende fomentar el apoyo dentro de nuestras mismas localidades, ayudarnos entre todos y ayudar a los mas necesitados. Por esto mismo tambien contamos con donaciones al momento de hacer compra de giftcards para ayudar a comunidades y de escasos recursos. </p>
+
+                <Link to="/" ><img className="hhgr" src={hh} alt="logo" />
+                </Link>
+
             </div>
         </div>
     )

@@ -5,34 +5,34 @@ import giftbox from '../../assets/icons/ticket.svg';
 import money from '../../assets/icons/coin-dollar.svg';
 
 
+
 const Cards = () => {
     return (
         <section className="container">
-            <h3 className="mainct">ÚNETE A LA RED</h3>      
-                <div className="card-group">
-                    <div className="icons col-12 col-sm-12 col-md-6 col-lg-4">
+            <h3 className="mainct">GIFTRED. Revolucionando los certificados de regalo</h3>
+            <div className="card-group">
+                <div className="cards icons col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="card-body">
                         <img src={adduser} className="icon-size" alt="Reigstro" />
-                        <div className="card-body">
-                            <h5 className="card-title">Crea una cuenta</h5>
-                            <p className="card-text text-cards">Llena tu registro con toda la información solicitada. </p>
-                        </div>
+                        <h5 className="card-title">Registrate</h5>
+                        <p className="card-text text-cards">Llena tu registro con toda la información solicitada. </p>
                     </div>
-                    <div className="icons col-12 col-sm-12 col-md-6 col-lg-4">
+                </div>
+                <div className="cards icons col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="card-body">
                         <img src={giftbox} className="icon-size" alt="Buscar" />
-                        <div className="card-body">
-                            <h5 className="card-title">Genera tus GiftCards</h5>
-                            <p className="card-text text-cards"> Recibiras un codigo QR único que podrás compartir con tus clientes 
-                        </p>
-                        </div>
+                        <h5 className="card-title">Conéctate</h5>
+                        <p className="card-text text-cards"> Ingresa como Cliente o Empresa </p>
                     </div>
-                    <div className="icons col-12 col-sm-12 col-md-6 col-lg-4">
-                        <img src={money} className="icon-size" alt="Enlace"/>
-                        <div className="card-body">
-                            <h5 className="card-title">Recibe Dinero</h5>
-                            <p className="card-text text-cards">Su dinero se reflejará en su cuenta bancaria al dia siguiente de la compra del cliente</p>
-                        </div>
+                </div>
+                <div className="cards icons col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="card-body">
+                        <img src={money} className="icon-size" alt="Enlace" />
+                        <h5 className="card-title">Ofrece o Compra</h5>
+                        <p className="card-text text-cards">Apoya a tus tiendas favoritas</p>
                     </div>
-                </div>        
+                </div>
+            </div>
         </section>
     )
 }

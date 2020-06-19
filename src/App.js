@@ -5,7 +5,7 @@ import Signup from './Views/Signup';
 import Directorio from './Views/Directorio';
 // import SigninContainer from './containers/SigninContainer/SigninContainer';
 // import GiftcardContainer from './containers/GiftcardContainer/GiftcardContainer';
-// import SobreContainer from './containers/SobreContainer/SobreContainer';
+import SobreContainer from './components/SobreContainer/SobreContainer';
 // import Faqscontainer from './containers/faqscontainer/Faqscontainer';
 import NavBar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -15,15 +15,16 @@ import DashboardUser from './Views/DashboardUserContainer';
 
 function App() {
   return (
+    
     <BrowserRouter>
-       <NavBar/>       
+    <NavBar/>
       <Switch>
         <Route exact path="/" component={Mainpage} />
         <Route exact path="/signup" component={Signup}/>
         <Route exact path="/directorio" component={Directorio} />
         <Route exact path="/dashboard-user" component={DashboardUser} />
         {/* <Route exact path="/giftcard" component={GiftcardContainer} /> */}
-        {/* <Route exact path="/quienes_somos" component={SobreContainer} />       */}
+        <Route exact path="/quienes_somos" component={SobreContainer} />      
         {/* <Route exact path="/faqs" component={Faqscontainer} /> */}
       </Switch>
       <Footer />
