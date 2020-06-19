@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link as RouterLink, Redirect } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
-import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
@@ -14,26 +14,62 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './ListItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import { mainListItems } from './ListItems';
+import { Avatar } from '@material-ui/core';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+// Contenido del dashboard
+import PanelData from './PanelData';
+import UserData from './UserData';
+import CardData from './CardData';
+
+
+function GetContent(url) {
+
+  const classes = useStyles();
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+    switch (url) {
+      case 'panel':
+        return (
+          <Grid item xs={12} md={4} lg={3}>
+          <Paper className={fixedHeightPaper}>
+            <PanelData />
+          </Paper>
+        </Grid>
+        )
+        break;
+        case 'user':
+        return (<Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <UserData />
+          </Paper>
+        </Grid> 
+        )
+        break;
+        case 'cards':
+        return (
+          <Grid item xs={12} md={4} lg={3}>
+              <Paper className={fixedHeightPaper}>
+                <CardData />
+              </Paper>
+            </Grid> 
+        )
+        break;
+        case 'support':
+        return (
+          <h1>Hola support</h1>
+        )
+        break;
+    
+      default:
+       return( 
+       <Redirect to="../dashboard-user" />
+       )
+        break;
+    }
 }
 
 const drawerWidth = 240;
@@ -53,6 +89,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
   },
   appBar: {
+    marginTop: '127px',
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -117,21 +154,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+export default function Dashboard(props) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const urlQuery = urlParams.get('q');
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)} >
+      <AppBar position="absolute" mt={45} className={clsx(classes.appBar, open && classes.appBarShift)} >
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
@@ -142,12 +182,19 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
+          
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard User
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
+          <Avatar />
+          <IconButton 
+            component={RouterLink}
+            to="/"
+            color="inherit">
+            <Badge 
+             badgeContent={4} 
+             color="secondary">
+              <NotificationsIcon color="White" />
             </Badge>
           </IconButton>
         </Toolbar>
@@ -167,34 +214,13 @@ export default function Dashboard() {
         <Divider />
         <List>{mainListItems}</List>
         <Divider />
-        <List>{secondaryListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
-              </Paper>
-            </Grid>
+            { GetContent(urlQuery) }
           </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
         </Container>
       </main>
     </div>

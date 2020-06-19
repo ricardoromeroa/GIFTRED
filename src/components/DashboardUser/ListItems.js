@@ -1,70 +1,82 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+
+
+// Layer
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
+// import ListSubheader from '@material-ui/core/ListSubheader';
+
+// Icons
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import Person from '@material-ui/icons/Person';
+import GiftCard from '@material-ui/icons/CardGiftcard';
+import Support from '@material-ui/icons/ContactSupport';
+// import LayersIcon from '@material-ui/icons/Layers';
+// import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem
+      component={RouterLink}
+      to="../dashboard-user?q=panel"
+      button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <ListItemText primary="Panel de Usuario" />
     </ListItem>
-    <ListItem button>
+    <ListItem
+      component={RouterLink}
+      to="../dashboard-user?q=user"
+      button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <Person />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="Perfil" />
     </ListItem>
-    <ListItem button>
+    <ListItem
+      component={RouterLink}
+      to="../dashboard-user?q=cards"
+      button>
       <ListItemIcon>
-        <PeopleIcon />
+        <GiftCard />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="Gift - Cards" />
     </ListItem>
-    <ListItem button>
+    <ListItem
+      component={RouterLink}
+      to="../dashboard-user?q=support"
+      button>
       <ListItemIcon>
-        <BarChartIcon />
+        <Support />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="Soporte" />
     </ListItem>
   </div>
 );
 
-export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Current month" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Last quarter" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
-    </ListItem>
-  </div>
-);
+// export const secondaryListItems = (
+//   <div>
+//     <ListSubheader inset>Saved reports</ListSubheader>
+//     <ListItem button>
+//       <ListItemIcon>
+//         <AssignmentIcon />
+//       </ListItemIcon>
+//       <ListItemText primary="Current month" />
+//     </ListItem>
+//     <ListItem button>
+//       <ListItemIcon>
+//         <AssignmentIcon />
+//       </ListItemIcon>
+//       <ListItemText primary="Last quarter" />
+//     </ListItem>
+//     <ListItem button>
+//       <ListItemIcon>
+//         <AssignmentIcon />
+//       </ListItemIcon>
+//       <ListItemText primary="Year-end sale" />
+//     </ListItem>
+//   </div>
+// );
