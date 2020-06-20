@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 import { Link as RouterLink, Redirect } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -31,45 +32,45 @@ function GetContent(url) {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
-    switch (url) {
-      case 'panel':
-        return (
-          <Grid item xs={12} md={4} lg={3}>
+  switch (url) {
+    case 'panel':
+      return (
+        <Grid item xs={12} md={4} lg={3}>
           <Paper className={fixedHeightPaper}>
             <PanelData />
           </Paper>
         </Grid>
-        )
-        break;
-        case 'user':
-        return (<Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <UserData />
+      )
+      break;
+    case 'user':
+      return (<Grid item xs={12}>
+        <Paper className={classes.paper}>
+          <UserData />
+        </Paper>
+      </Grid>
+      )
+      break;
+    case 'cards':
+      return (
+        <Grid item xs={12} md={4} lg={3}>
+          <Paper className={fixedHeightPaper}>
+            <CardData />
           </Paper>
-        </Grid> 
-        )
-        break;
-        case 'cards':
-        return (
-          <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <CardData />
-              </Paper>
-            </Grid> 
-        )
-        break;
-        case 'support':
-        return (
-          <h1>Hola support</h1>
-        )
-        break;
-    
-      default:
-       return( 
-       <Redirect to="../dashboard-user" />
-       )
-        break;
-    }
+        </Grid>
+      )
+      break;
+    case 'support':
+      return (
+        <h1>Hola support</h1>
+      )
+      break;
+
+    default:
+      return (
+        <Redirect to="../dashboard_user" />
+      )
+      break;
+  }
 }
 
 const drawerWidth = 240;
@@ -155,6 +156,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard(props) {
+  const { user } = useContext(AuthContext);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
@@ -164,9 +166,9 @@ export default function Dashboard(props) {
     setOpen(false);
   };
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const urlQuery = urlParams.get('q');
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const urlQuery = urlParams.get('q');
 
   return (
     <div className={classes.root}>
@@ -182,18 +184,18 @@ export default function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          
+
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard User
+            Hola! {user.first_name}
           </Typography>
           <Avatar />
-          <IconButton 
+          <IconButton
             component={RouterLink}
-            to="/"
+            to="/giftcard"
             color="inherit">
-            <Badge 
-             badgeContent={4} 
-             color="secondary">
+            <Badge
+              badgeContent={4}
+              color="secondary">
               <NotificationsIcon color="White" />
             </Badge>
           </IconButton>
@@ -219,7 +221,7 @@ export default function Dashboard(props) {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            { GetContent(urlQuery) }
+            {GetContent(urlQuery)}
           </Grid>
         </Container>
       </main>

@@ -19,7 +19,7 @@ const Footer = () => {
                         </img>
                     </li>
                     <li className="list-inline-item social-facebook">
-                        <img className="icon-size" src={ ig } alt='..' href="/">
+                        <img className="icon-size" src={ ig } alt='..' url="https://www.instagram.com/giftredla">
                             
                         </img>
                     </li>

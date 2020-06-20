@@ -1,15 +1,15 @@
 import React, { useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext'; 
 import { useHistory } from "react-router-dom";
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from "axios";
-import "./Signin.css";
-import logo from '../../assets/img/logos/Logo.png';
+import "./SigninEmpresa.css";
+import logo from '../../assets/img/logos/Logo.png'
 
 
 
-const Signin = () => {
+const SigninEmpresa = () => {
     const { setTokenInLocalStorage, isAuth } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -20,13 +20,11 @@ const Signin = () => {
     if (isAuth) return <Redirect to="/" />
 
 
-
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const jsonSend = { email, password }
         try {
-            const axiosRes = await axios.post('http://localhost:3000/api/v1/login', jsonSend);
+            const axiosRes = await axios.post('https://roar-backend.herokuapp.com/api/v1/login', jsonSend);
             const { token } = axiosRes.data;
             setTokenInLocalStorage(token);
             alert('Succesful login');
@@ -36,23 +34,36 @@ const Signin = () => {
     };
 
     return (
-        <div className="auth">
+        <React.Frgment className="auth">
             <div onSubmit={handleSubmit} className="card col-12">
-                <Link to="/" className="logosi"><img className="logosi" src={logo} alt="logo" /> <h2 className="h2cye">Clientes</h2>
+                <Link to="/" className="logosi"><img className="logosi" src={logo} alt="logo" /><h2 className="h2cye">Empresa</h2>
                 </Link>
-
+                
 
                 <div className="form-group">
                     <label to="exampleInputEmail1">Correo Electrónico</label>
-                    <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Ingresa tu Correo Electrónico" />
+                    <input 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    value={email} 
+                    type="email"
+                    name="email" 
+                    className="form-control" 
+                    id="exampleInputEmail1" 
+                    aria-describedby="emailHelp"
+                    placeholder="Ingresa tu Correo Electrónico" />
                     <small id="emailHelp" className="form-text text-muted">Nunca compartiremos tu información personal con alguien más.</small>
                 </div>
 
                 <div className="form-group">
                     <label to="exampleInputPassword1">Contraseña</label>
-
-                    <input onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="exampleInputPassword1" placeholder="Ingresa tu Contraseña" />
+                    <input 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    value={password} 
+                    type="password" 
+                    className="form-control"
+                    name="password" 
+                    id="exampleInputPassword1" 
+                    placeholder="Ingresa tu Contraseña" />
                 </div>
 
                 <div className="text-danger">
@@ -67,13 +78,13 @@ const Signin = () => {
                 }
                 <button onClick={() => handleSubmit()} type="submit" className="btn btn-primary"> Accede a GIFTRED </button>
 
-                <p className="registro">No te has registrado? <NavLink to="/signup">Registrate Aquí</NavLink></p>
+                <p className="registro">No te has registrado? <Link to="/signupempresa">Registrate Aquí</Link></p>
             </div>
-        </div>
+        </React.Frgment>
 
     )
 
 
 }
 
-export default Signin
+export default SigninEmpresa

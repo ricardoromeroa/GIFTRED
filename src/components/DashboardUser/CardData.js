@@ -11,23 +11,23 @@ export default function CardData() {
   const [genderUser, setGenderUser] = useState('');
 
   // Temporalmente datos desde SWAPI
- useEffect(() => {
-  axios.get('https://swapi.dev/api/people/1')
-  .then((res) => {
-  
-    setNameUser(res.data.name);
-    setGenderUser(res.data.gender);
-    setMassUser(res.data.mass);
-  })
-  .catch((error) => console.log(error));
- },[])
+  useEffect(() => {
+    axios.get('https://swapi.dev/api/people/1')
+      .then((res) => {
+
+        setNameUser(res.data.name);
+        setGenderUser(res.data.gender);
+        setMassUser(res.data.mass);
+      })
+      .catch((error) => console.log(error));
+  }, [])
 
   // Temporalmente datos desde SWAPI
-    return(
-        <CardDetails
-                name={nameUser}
-                gender={genderUser}
-                mass={massUser}
-                />
-    )
+  return (
+    <CardDetails
+      name={nameUser}
+      gender={genderUser}
+      mass={massUser}
+    />
+  )
 }
