@@ -24,7 +24,7 @@ const GiftcardContainer = () => {
 
     return (
         <div>
-            <Navbar />
+            
             <section className="fondo">
 
                 <div className="container">
@@ -32,7 +32,7 @@ const GiftcardContainer = () => {
 
                 </div>
             </section>
-            <Footer />
+            
         </div>
     )
 }

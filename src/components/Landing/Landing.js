@@ -1,4 +1,5 @@
 import React from 'react'
+import  { NavLink } from 'react-router-dom';
 import './Landing.css'
 
 const LandingMain = () => {
@@ -16,8 +17,8 @@ const LandingMain = () => {
           
         </div>
         <div className="mainbuttons">
-          <button href="/clientes" className="btn btn-primary btn-xl js-scroll-trigger absolute-button-left">Clientes</button>
-          <button href="/negocios" className="btn btn-primary btn-xl js-scroll-trigger absolute-button-right">Negocios</button>
+          <NavLink to="/dashboard_user" ><button className="btn btn-primary btn-xl js-scroll-trigger absolute-button-left">Clientes</button></NavLink>
+          <NavLink to="/negocios"><button className="btn btn-primary btn-xl js-scroll-trigger absolute-button-right">Negocios</button></NavLink>
         </div>
       </section>
     </React.Fragment>

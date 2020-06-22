@@ -5,7 +5,7 @@ const DashboardUserContainer = () => {
   return (
       <div>
         <DashboardUser />
-      </div>        
+      </div>
   )
 };
 
