@@ -10,10 +10,8 @@ const Navbar = () => {
     const PublicNavbar = () => {
         return (
             <header>
-                <nav 
-                id="navbarWeb" 
-                className="navbar navbar-expand-lg navbar-light" 
-                id="mainNav">
+                <nav  
+                className="navbar navbar-expand-lg navbar-light"> 
                     <NavLink className="navbar-brand" to="/">
                         <img src={logo} alt="giftred" className="navbar-brand js-scroll-trigger" href="#page-top" />
                     </NavLink>
@@ -47,9 +45,7 @@ const Navbar = () => {
         return (
             <header>
                 <nav 
-                id="navbarWeb" 
-                className="navbar navbar-expand-lg navbar-light" 
-                id="mainNav">
+                className="navbar navbar-expand-lg navbar-light"> 
                     <NavLink className="navbar-brand" to="/">
                         <img src={logo} alt="giftred" className="navbar-brand js-scroll-trigger" href="#page-top" />
                     </NavLink>

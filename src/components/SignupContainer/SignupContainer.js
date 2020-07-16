@@ -1,11 +1,16 @@
 import React from 'react';
 import SignupForm from '../SignupForm/SignupForm';
+import "./SignupContainer.css"
 
 const SignupContainer = () => {
     return (
-        <React.Fragment>
-            <SignupForm />
-        </React.Fragment>
+        <div>
+        <section className="fondo">
+            <div className="container">
+                <SignupForm />
+            </div>
+        </section>
+    </div>
     )
 }
 
