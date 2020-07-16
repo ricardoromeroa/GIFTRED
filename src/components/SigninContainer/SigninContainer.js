@@ -1,8 +1,8 @@
 import React from 'react';
 import Signin from '../Signin/Signin';
 import './SigninContainer.css'
-import Navbar from "../Navbar/Navbar";
-import Footer from '../Footer/Footer'
+// import Navbar from "../Navbar/Navbar";
+// import Footer from '../Footer/Footer'
 
 const SigninContainer = () => {
     return (

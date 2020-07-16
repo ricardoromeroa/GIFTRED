@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { NavLink, Link } from 'react-router-dom';
 import axios from "axios";
 import "./Signin.css";
@@ -13,9 +13,9 @@ const Signin = () => {
     const { setTokenInLocalStorage, isAuth } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
-    const history = useHistory();
+    const [error] = useState("");
+    const [loading] = useState(false);
+    // const history = useHistory();
 
     if (isAuth) return <Redirect to="/" />
 
@@ -44,7 +44,13 @@ const Signin = () => {
 
                 <div className="form-group">
                     <label to="exampleInputEmail1">Correo Electrónico</label>
-                    <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    value={email} 
+                    type="email" 
+                    className="form-control" 
+                    id="exampleInputEmail1" 
+                    aria-describedby="emailHelp"
                         placeholder="Ingresa tu Correo Electrónico" />
                     <small id="emailHelp" className="form-text text-muted">Nunca compartiremos tu información personal con alguien más.</small>
                 </div>
