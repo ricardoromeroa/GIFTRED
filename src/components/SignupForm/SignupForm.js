@@ -38,8 +38,9 @@ const SignupForm = () => {
         }
         // Hacer una peticion post al backend para registrar un usuario
         try {
-            await axios.post('http://localhost:3000/api/v1/register', jsonSend);
+            const res=   await axios.post('https://gift-red.herokuapp.com/api/v1/users', jsonSend);
             alert('Successful signup');
+            console.log(res)
         } catch (error) {
             alert('Error');
         }
@@ -48,6 +49,7 @@ const SignupForm = () => {
     return (
             <div className="auth">
                 <div onSubmit={handleSubmit} className="card col-12">
+                    <form>
                     <Link to="/" className="logosi"><img className="logosi" src={logo} alt="logo" /><h2 className="h2cye">Cliente</h2>
                     </Link>
                     <div className="form-group">
@@ -95,8 +97,8 @@ const SignupForm = () => {
                             value={password}
                             onChange={handleInput} />
                     </div>
-                    <button onClick={() => handleSubmit()} type="submit" className="btn btn-primary"> Accede a GIFTRED </button>
-
+                    <button type="submit" className="btn btn-primary"> Accede a GIFTRED </button>
+                </form>
                     <p className="registro">No te has registrado? <Link to="/signupempresa">Registrate Aquí</Link></p>
                 </div>
             </div>
