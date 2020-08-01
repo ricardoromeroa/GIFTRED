@@ -1,0 +1,6 @@
+.fondo {
+    background: #f53c04;
+    background: linear-gradient(to bottom, #ff3c00, #dc2430);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

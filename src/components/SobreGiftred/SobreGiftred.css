@@ -1,0 +1,93 @@
+.container {
+    
+    padding: 50px;
+    margin: auto;
+}
+
+
+
+
+.form-group.form-control {
+    padding: 50px;
+}
+
+.card {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.856) !important;
+    align-self: center;
+    margin-top: 150px;
+}
+
+.label {
+    margin-top: .5rem;
+}
+
+.btn {
+    margin-top: 50px;
+    align-self: center !important;   
+}
+
+.logoqs{
+    max-width: 80%;
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 30px;
+    margin-left: 5%;
+}
+
+.hhgr {
+    max-width: 80%;
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 30px;
+    margin-left: 10%;
+
+}
+
+
+
+.registro {
+    align-self: center;
+}
+
+.textoli a {
+    color: white;
+}
+
+/* .form{
+    background-color: rgba(255, 255, 255, 0.192);
+} */
+
+.auth {
+    
+    align-self: center;
+    padding: 50px;
+    margin: auto;
+    max-width: 800px; 
+}
+
+.formato {
+    text-align: justify;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   margin: 20px
+}
+
+.formato2 {
+    text-align: justify;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-top: white;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.titleqs1 {
+    margin-bottom: 40px;
+    color: red;
+}
+
+.h5qs {
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(87, 87, 255);
+} 
+
